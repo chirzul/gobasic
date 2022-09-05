@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Printf("%g0\n", task.RoundNumber(3.46))
 
-	sequence := task.Sequence{Num: 40}
+	sequence := task.Sequence{Limit: 40}
 	fmt.Println(sequence.OddSequence())
 	fmt.Println(sequence.EvenSequence())
 	fmt.Println(sequence.PrimeSequence())

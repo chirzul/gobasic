@@ -1,12 +1,12 @@
 package task
 
 type Sequence struct {
-	Num int
+	Limit int
 }
 
 func (seq *Sequence) OddSequence() []int {
 	var result []int
-	for i := 1; i <= seq.Num; i += 2 {
+	for i := 1; i <= seq.Limit; i += 2 {
 		result = append(result, i)
 	}
 	return result
@@ -14,7 +14,7 @@ func (seq *Sequence) OddSequence() []int {
 
 func (seq *Sequence) EvenSequence() []int {
 	var result []int
-	for i := 2; i <= seq.Num; i += 2 {
+	for i := 2; i <= seq.Limit; i += 2 {
 		result = append(result, i)
 	}
 	return result
@@ -22,7 +22,7 @@ func (seq *Sequence) EvenSequence() []int {
 
 func (seq *Sequence) PrimeSequence() []int {
 	var result []int
-	for i := 1; i <= seq.Num; i++ {
+	for i := 1; i <= seq.Limit; i++ {
 		check := 0
 		for divider := 1; divider <= i; divider++ {
 			if i%divider == 0 {
@@ -40,7 +40,7 @@ func (seq *Sequence) FiboSequence() []int {
 	a, b := 0, 1
 	var fibo int
 	var result []int
-	for a < seq.Num {
+	for a < seq.Limit {
 		fibo = a
 		a = b
 		b = fibo + a
